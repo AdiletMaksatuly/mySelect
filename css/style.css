@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrap {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 5rem;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.settings {
+  border-right: 1px dashed #ccc;
+  width: 350px;
+  z-index: 1000;
+}
+
+.settings h2 {
+  margin-bottom: 1rem;
+}
+
+.settings ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.select {
+  z-index: 1000;
+}
+
+.select__input {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid black;
+  min-width: 300px;
+  min-height: 40px;
+  padding: 0 0.5rem;
+  position: relative;
+}
+
+.select__input-label,
+.select__input i {
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.select__input-label.active {
+  -webkit-transform: translate(-1rem, -2rem) scale(0.9);
+          transform: translate(-1rem, -2rem) scale(0.9);
+}
+
+.select__items {
+  display: none;
+  margin-top: 10px;
+  -webkit-box-shadow: 0px 5px 16px 4px rgba(188, 188, 188, 0.67);
+          box-shadow: 0px 5px 16px 4px rgba(188, 188, 188, 0.67);
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.select__items ul {
+  list-style: none;
+}
+
+.select__items ul li {
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select__items ul li:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.select__items ul li:last-child {
+  border-bottom: none;
+}
+
+.select.active .select__items {
+  display: block;
+}
+
+.select.active .select__input-label {
+  -webkit-transform: translate(-1rem, -2rem) scale(0.9);
+          transform: translate(-1rem, -2rem) scale(0.9);
+}
+
+.select.active i {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.select__backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
