@@ -14,23 +14,6 @@
    max-width: 800px;
 }
 
-.settings {
-   border-right: 1px dashed #ccc;
-   width: 350px;
-   z-index: 1000;
-}
-
-.settings h2 {
-   margin-bottom: 1rem;
-}
-
-.settings ul {
-   list-style: none;
-   margin: 0;
-   padding: 0;
-   margin-bottom: 1rem;
-}
-
 .select {
    z-index: 1000;
    &__input {
